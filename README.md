@@ -3,18 +3,21 @@
 Note: John Mount, Win-Vector LLC, 11-17-2017
 --------------------------------------------
 
-[This repository](https://github.com/WinVector/addinexamplesWV) is a fork of [RStudio's original](https://github.com/rstudio/addinexamples).
+[This repository](https://github.com/WinVector/addinexamplesWV) is a fork of [RStudio's original](https://github.com/rstudio/addinexamples). We have renamed the package and removed all other functionality so that this package does not interfere with installing and using the original package.
 
-Supplies [`insertDotPipeAddin()`](https://github.com/WinVector/addinexamplesWV/blob/master/R/insertDotPipeAddin.R) which inserts [`wrapr`](https://winvector.github.io/wrapr/)'s [`%.>%`](https://winvector.github.io/wrapr/articles/dot_pipe.html) ("dot pipe").
+This package supplies the following two [RStudio add-ins](https://rstudio.github.io/rstudioaddins/):
 
-We have renamed the package and removed all other functionality so that this package does not interfere with installing and using the original package.
+-   "Insert `%.>%`" which inserts [`wrapr`](https://winvector.github.io/wrapr/)'s [`%.>%`](https://winvector.github.io/wrapr/articles/dot_pipe.html) ("dot pipe")
+-   "Insert `(.)`" which inserts "`(.)`" ("argument stand-in").
+
+The above are useful when bound to keyboard shortcuts in [RStudio](https://www.rstudio.com/products/RStudio/).
 
 Installation
 ------------
 
 The `R` code to install is below.
 
-We first ensure that you have the latest versions of:
+We first ensure that you have the latest [CRAN](https://cran.r-project.org) release versions of:
 
 -   [devtools](https://github.com/hadley/devtools)
 -   [htmltools](https://github.com/rstudio/htmltools)
@@ -24,16 +27,13 @@ We first ensure that you have the latest versions of:
 -   [wrapr](https://CRAN.R-project.org/package=wrapr)
 
 ``` r
-if (!requireNamespace("devtools", quietly = TRUE)) {
-  install.packages("devtools")
-}
-install.packages(c("htmltools", "shiny", "miniUI", "formatR", "wrapr"))
+install.packages(c("devtools", "htmltools", "shiny", 
+                   "miniUI", "formatR", "wrapr"))
 ```
 
 Then we install this package itself from GitHub:
 
 ``` r
-# installing forked version instead of original "rstudio/addinexamples"
 devtools::install_github("WinVector/addinexamples")
 ```
 
@@ -60,4 +60,26 @@ library("wrapr")
 
     ## [1] 0.893855
 
-If you also bind "Insert `(.)`" to `F10` typing the above pipelines can become very fast and efficient.
+Dot pipe insists on explicit marking of function arguments with "`.`". If you also bind "Insert `(.)`" to `F10` typing the above pipelines can become very fast and efficient.
+
+Dot pipe also works with more complicated function signatures, and with [`dplyr`](https://CRAN.R-project.org/package=dplyr):
+
+``` r
+suppressPackageStartupMessages(library("dplyr"))
+
+starwars %.>% 
+  group_by(., name) %.>% 
+  summarize(., mean_height = mean(height)) %.>% 
+  ungroup(.) %.>% 
+  left_join(data_frame(name = c("Han Solo", 
+                                "Luke Skywalker")), 
+            ., 
+            by = 'name') %.>% 
+  arrange(., desc(name))
+```
+
+    ## # A tibble: 2 x 2
+    ##             name mean_height
+    ##            <chr>       <dbl>
+    ## 1 Luke Skywalker         172
+    ## 2       Han Solo         180

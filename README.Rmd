@@ -8,11 +8,15 @@ Note: John Mount, Win-Vector LLC, 11-17-2017
 --------------------------------------------
 
 [This repository](https://github.com/WinVector/addinexamplesWV) is a fork of [RStudio's original](https://github.com/rstudio/addinexamples). 
- 
-Supplies [`insertDotPipeAddin()`](https://github.com/WinVector/addinexamplesWV/blob/master/R/insertDotPipeAddin.R) which inserts [`wrapr`](https://winvector.github.io/wrapr/)'s [`%.>%`](https://winvector.github.io/wrapr/articles/dot_pipe.html) ("dot pipe").
-
 We have renamed the package and removed all other functionality so that this package
 does not interfere with installing and using the original package.
+
+This package supplies the following two [RStudio add-ins](https://rstudio.github.io/rstudioaddins/):
+
+  * "Insert `%.>%`" which inserts [`wrapr`](https://winvector.github.io/wrapr/)'s [`%.>%`](https://winvector.github.io/wrapr/articles/dot_pipe.html) ("dot pipe") 
+  * "Insert `(.)`" which inserts "`(.)`" ("argument stand-in").
+  
+The above are useful when bound to keyboard shortcuts in [RStudio](https://www.rstudio.com/products/RStudio/).
 
 
 Installation
@@ -20,7 +24,7 @@ Installation
 
 The `R` code to install is below.
 
-We first ensure that you have the latest versions of:
+We first ensure that you have the latest [CRAN](https://cran.r-project.org) release versions of:
 
   * [devtools](https://github.com/hadley/devtools)
   * [htmltools](https://github.com/rstudio/htmltools)
@@ -31,16 +35,13 @@ We first ensure that you have the latest versions of:
 
 
 ```{r eval=FALSE}
-if (!requireNamespace("devtools", quietly = TRUE)) {
-  install.packages("devtools")
-}
-install.packages(c("htmltools", "shiny", "miniUI", "formatR", "wrapr"))
+install.packages(c("devtools", "htmltools", "shiny", 
+                   "miniUI", "formatR", "wrapr"))
 ```
 
 Then we install this package itself from GitHub:
 
 ```{r eval=FALSE}
-# installing forked version instead of original "rstudio/addinexamples"
 devtools::install_github("WinVector/addinexamples")
 ```
 
@@ -50,7 +51,7 @@ Finally bind "Insert `%.>%`" to
 Use
 ---
 
-Once you have installed and configured all of the above you can press `F9` to insert "`%.>%`"
+Once you have installed and configured all of the above you can press `F9` to insert "` %.>% `"
 where you are typing.  "`%.>%`" is the `wrapr` "dot pipe" (an alternative to the [`magrittr`](https://CRAN.R-project.org/package=magrittr) `%>%` pipe).  This allows 
 easy conversion of nested function application into left to right sequential pipe notation.
 
@@ -64,8 +65,25 @@ library("wrapr")
 4 %.>% exp(.) %.>% sqrt(.) %.>% sin(.)
 ```
 
+Dot pipe insists on explicit marking of function arguments with "`.`".
 If you also bind "Insert `(.)`" to `F10` typing the above pipelines can become
 very fast and efficient.
+
+Dot pipe also works with more complicated function signatures, and with [`dplyr`](https://CRAN.R-project.org/package=dplyr):
+
+```{r}
+suppressPackageStartupMessages(library("dplyr"))
+
+starwars %.>% 
+  group_by(., name) %.>% 
+  summarize(., mean_height = mean(height)) %.>% 
+  ungroup(.) %.>% 
+  left_join(data_frame(name = c("Han Solo", 
+                                "Luke Skywalker")), 
+            ., 
+            by = 'name') %.>% 
+  arrange(., desc(name))
+```
 
 
 

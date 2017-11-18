@@ -1,9 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Note: John Mount, Win-Vector LLC, 11-17-2017
---------------------------------------------
-
-[This repository](https://github.com/WinVector/addinexamplesWV) is a fork of [RStudio's original](https://github.com/rstudio/addinexamples). We have renamed the package and removed all other functionality so that this package does not interfere with installing and using the original package.
+[This repository](https://github.com/WinVector/addinexamplesWV) is a fork of [RStudio's original](https://github.com/rstudio/addinexamples). We have renamed the package and removed all other functionality so that this package does not interfere with installing and using the original package. The original did not provide the pipe add-in shortcuts we discuss below.
 
 This package supplies the following [RStudio add-ins](https://rstudio.github.io/rstudioaddins/):
 
@@ -67,7 +64,14 @@ library("wrapr")
 
 Dot pipe insists on explicit marking of function arguments with "`.`". If you also bind "Insert `(.)`" to `F10` typing the above pipelines can become *very* fast and efficient.
 
-Bizarro pipe works similarly (but does not require any package for implementation, as it is an emergent behavior of pre-existing base-`R` semantics):
+Basically:
+
+-   You type a function name and then press `F10`. This gives you the template for function arguments which you either leave alone (if the function only takes one argument) or edit to add in the additional arguments you need. This replaces pressing space after you type in a function name.
+-   You press `F9` when you are done with a pipeline step (it replaces "enter" or "return", which you use only on the last step of a pipeline).
+
+Try the above in the RStudio editor and the RStudio console, it works really well both places.
+
+Bizarro pipe can be used the same way as we just used dot pipe (but does not require any package for implementation, as it is an emergent behavior of pre-existing base-`R` semantics):
 
 ``` r
 4 ->.;

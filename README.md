@@ -2,12 +2,14 @@
 Note: John Mount, Win-Vector LLC, 11-17-2017
 --------------------------------------------
 
-[This repository](https://github.com/WinVector/addinexamples) is forked from [RStudio's original](https://github.com/rstudio/addinexamples). 
+[This repository](https://github.com/WinVector/addinexamplesWV) is a fork of [RStudio's original](https://github.com/rstudio/addinexamples). 
  
-Added [`insertDotPipeAddin()`](https://github.com/WinVector/addinexamples/blob/master/R/insertDotPipeAddin.R) which inserts [`wrapr`](https://winvector.github.io/wrapr/)'s [`%.>%`](https://winvector.github.io/wrapr/articles/dot_pipe.html) ("dot pipe").  Suggest using the RStudio instructions and 
+Added [`insertDotPipeAddin()`](https://github.com/WinVector/addinexamplesWV/blob/master/R/insertDotPipeAddin.R) which inserts [`wrapr`](https://winvector.github.io/wrapr/)'s [`%.>%`](https://winvector.github.io/wrapr/articles/dot_pipe.html) ("dot pipe").  
+Suggest using the RStudio instructions and 
 binding this to `F9` (which has a right-facing glyph on some Mac keyboards) via `Tools->Addins->BrowseAddins->KeyboardShortCuts`.
 
-Beyond that we only updated the package and installation instructions.
+We have renamed the packge and removed all other functionality so that this package
+does not interfere with installing and using the original package.
 
 
 RStudio Addins
@@ -30,7 +32,7 @@ then install this package.
 if (!requireNamespace("devtools", quietly = TRUE)) {
   install.packages("devtools")
 }
-install.packages(c("htmltools", "shiny", "miniUI"))
+install.packages(c("htmltools", "shiny", "miniUI", "formatR"))
 # Edit: installing forked version instead of original "rstudio/addinexamples"
 devtools::install_github("WinVector/addinexamples")
 ```

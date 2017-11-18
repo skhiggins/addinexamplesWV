@@ -1,9 +1,14 @@
 Name: Insert %.>%
-Description: Inserts " `%.>%` " (wrapr dot pipe) at the cursor position.
+Description: Inserts ` %.>% ` (wrapr dot pipe) at the cursor position.
 Binding: insertDotPipeAddin
 Interactive: false
 
 Name: Insert (.)
 Description: Inserts `(.)` (wrapr argument stand-in) at the cursor position.
 Binding: insertArgAddin
+Interactive: false
+
+Name: Insert ->.;
+Description: Inserts ` ->.; ` (Bizarro pipe) at the cursor position.
+Binding: insertBizzaroPipeAddin
 Interactive: false

@@ -7,7 +7,8 @@ Note: John Mount, Win-Vector LLC, 11-17-2017
 
 This package supplies the following two [RStudio add-ins](https://rstudio.github.io/rstudioaddins/):
 
--   "Insert `%.>%`" which inserts [`wrapr`](https://winvector.github.io/wrapr/)'s [`%.>%`](https://winvector.github.io/wrapr/articles/dot_pipe.html) ("dot pipe")
+-   "Insert `%.>%`" which inserts "`%.>%`" ([`wrapr`](https://winvector.github.io/wrapr/)'s ["dot pipe"](https://winvector.github.io/wrapr/articles/dot_pipe.html)")
+-   "Insert `->.;`" which inserts "`->.;`" (["Bizarro pipe"](http://www.win-vector.com/blog/2016/12/magrittrs-doppelganger/))
 -   "Insert `(.)`" which inserts "`(.)`" ("argument stand-in").
 
 The above are useful when bound to keyboard shortcuts in [RStudio](https://www.rstudio.com/products/RStudio/).
@@ -42,7 +43,7 @@ Finally bind "Insert `%.>%`" to `F9` (which has a right-facing glyph on some Mac
 Use
 ---
 
-Once you have installed and configured all of the above you can press `F9` to insert "`%.>%`" where you are typing. "`%.>%`" is the `wrapr` "dot pipe" (an alternative to the [`magrittr`](https://CRAN.R-project.org/package=magrittr) `%>%` pipe). This allows easy conversion of nested function application into left to right sequential pipe notation.
+Once you have installed and configured all of the above you can press `F9` to "Insert `%.>%`" where you are typing. "`%.>%`" is the `wrapr` "dot pipe" (an alternative to the [`magrittr`](https://CRAN.R-project.org/package=magrittr) `%>%` pipe). This allows easy conversion of nested function application into left to right sequential pipe notation.
 
 For example:
 
@@ -55,27 +56,41 @@ sin(sqrt(exp(4)))
 ``` r
 library("wrapr")
 
-4 %.>% exp(.) %.>% sqrt(.) %.>% sin(.)
+4 %.>%
+    exp(.) %.>%
+    sqrt(.) %.>%
+    sin(.)
 ```
 
     ## [1] 0.893855
 
 Dot pipe insists on explicit marking of function arguments with "`.`". If you also bind "Insert `(.)`" to `F10` typing the above pipelines can become very fast and efficient.
 
-Dot pipe also works with more complicated function signatures, and with [`dplyr`](https://CRAN.R-project.org/package=dplyr):
+Bizarro pipe works similarly (but does not require any package for implementation, it is an emergent behavior of base-`R` semantics):
+
+``` r
+4 ->.;
+    exp(.) ->.;
+    sqrt(.) ->.;
+    sin(.)
+```
+
+    ## [1] 0.893855
+
+Both of these pipes also work with more complicated function signatures, and with [`dplyr`](https://CRAN.R-project.org/package=dplyr):
 
 ``` r
 suppressPackageStartupMessages(library("dplyr"))
 
-starwars %.>% 
-  group_by(., name) %.>% 
-  summarize(., mean_height = mean(height)) %.>% 
-  ungroup(.) %.>% 
-  left_join(data_frame(name = c("Han Solo", 
+starwars %.>%
+    group_by(., name) %.>%
+    summarize(., mean_height = mean(height)) %.>%
+    ungroup(.) %.>%
+    left_join(data_frame(name = c("Han Solo", 
                                 "Luke Skywalker")), 
             ., 
-            by = 'name') %.>% 
-  arrange(., desc(name))
+            by = 'name') %.>%
+    arrange(., desc(name))
 ```
 
     ## # A tibble: 2 x 2

@@ -4,7 +4,7 @@ Binding: insertDotPipeAddin
 Interactive: false
 
 Name: Insert (.)
-Description: Inserts (.) (wrapr argument stand-in) at the cursor position.
+Description: Inserts (.) (argument stand-in) at the cursor position.
 Binding: insertArgAddin
 Interactive: false
 

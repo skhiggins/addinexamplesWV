@@ -7,10 +7,10 @@ Note: John Mount, Win-Vector LLC, 11-17-2017
 
 This package supplies the following [RStudio add-ins](https://rstudio.github.io/rstudioaddins/):
 
--   "Insert `%.>%`" which inserts "`%.>%`" ([`wrapr`](https://winvector.github.io/wrapr/)'s ["dot pipe"](https://winvector.github.io/wrapr/articles/dot_pipe.html)")
--   "Insert `->.;`" which inserts "`->.;`" (["Bizarro pipe"](http://www.win-vector.com/blog/2016/12/magrittrs-doppelganger/))
--   "Insert `%>%`" which inserts "`%>%`" (["Magrittr pipe"](https://CRAN.R-project.org/package=magrittr))
--   "Insert `(.)`" which inserts "`(.)`" ("argument stand-in").
+-   **"Insert `%.>%`"** which inserts "`%.>%`" ([`wrapr`](https://winvector.github.io/wrapr/)'s ["dot pipe"](https://winvector.github.io/wrapr/articles/dot_pipe.html)")
+-   **"Insert `(.)`"** which inserts "`(.)`" ("argument stand-in").
+-   **"Insert `->.;`"** which inserts "`->.;`" (["Bizarro pipe"](http://www.win-vector.com/blog/2016/12/magrittrs-doppelganger/))
+-   **"Insert `%>%`"** which inserts "`%>%`" (["Magrittr pipe"](https://CRAN.R-project.org/package=magrittr))
 
 The above are useful when bound to keyboard shortcuts in [RStudio](https://www.rstudio.com/products/RStudio/).
 
@@ -65,9 +65,9 @@ library("wrapr")
 
     ## [1] 0.893855
 
-Dot pipe insists on explicit marking of function arguments with "`.`". If you also bind "Insert `(.)`" to `F10` typing the above pipelines can become very fast and efficient.
+Dot pipe insists on explicit marking of function arguments with "`.`". If you also bind "Insert `(.)`" to `F10` typing the above pipelines can become *very* fast and efficient.
 
-Bizarro pipe works similarly (but does not require any package for implementation, it is an emergent behavior of base-`R` semantics):
+Bizarro pipe works similarly (but does not require any package for implementation, as it is an emergent behavior of pre-existing base-`R` semantics):
 
 ``` r
 4 ->.;

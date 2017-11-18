@@ -95,6 +95,7 @@ as it is an emergent behavior of pre-existing base-`R` semantics):
 Both of these pipes also work with more complicated function signatures, and with [`dplyr`](https://CRAN.R-project.org/package=dplyr):
 
 ```{r}
+# assuming you have dplyr installed
 suppressPackageStartupMessages(library("dplyr"))
 
 starwars %.>%
@@ -108,6 +109,12 @@ starwars %.>%
 	arrange(., desc(name))
 ```
 
+Another two good choices for binding are:
 
+  * `Alt-Space` for "Insert `(.)`"
+  * `Alt-Enter` for "Insert `%.>%`".
+
+That way you are treating the argument list as a space-like separator and the pipe
+symbol as a line-end-like separator.
 
 

@@ -85,6 +85,7 @@ Bizarro pipe can be used the same way as we just used dot pipe (but does not req
 Both of these pipes also work with more complicated function signatures, and with [`dplyr`](https://CRAN.R-project.org/package=dplyr):
 
 ``` r
+# assuming you have dplyr installed
 suppressPackageStartupMessages(library("dplyr"))
 
 starwars %.>%
@@ -103,3 +104,10 @@ starwars %.>%
     ##            <chr>       <dbl>
     ## 1 Luke Skywalker         172
     ## 2       Han Solo         180
+
+Another two good choices for binding are:
+
+-   `Alt-Space` for "Insert `(.)`"
+-   `Alt-Enter` for "Insert `%.>%`".
+
+That way you are treating the argument list as a space-like separator and the pipe symbol as a line-end-like separator.

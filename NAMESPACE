@@ -2,8 +2,9 @@
 
 export(insertArgAddin)
 export(insertBizzaroPipeAddin)
-export(insertDotPipeAddin)
+export(insertDotArrowPipeAddin)
 export(insertMagrittrPipeAddin)
+export(insertToDotPipeAddin)
 import(formatR)
 import(miniUI)
 import(rstudioapi)

@@ -3,6 +3,6 @@
 #' Call this function as an addin to insert \code{\link[wrapr]{\%.>\%}} (dot pipe, \url{https://winvector.github.io/wrapr/articles/dot_pipe.html}) at the cursor position.
 #'
 #' @export
-insertDotPipeAddin <- function() {
+insertDotArrowPipeAddin <- function() {
   rstudioapi::insertText(" %.>%\n\t")
 }

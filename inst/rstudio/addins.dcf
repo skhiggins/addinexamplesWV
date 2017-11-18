@@ -1,3 +1,8 @@
+Name: Insert %.>%
+Description: Inserts `%.>%` at the cursor position.
+Binding: insertDotPipeAddin
+Interactive: false
+
 Name: Insert %in%
 Description: Inserts `%in%` at the cursor position.
 Binding: insertInAddin

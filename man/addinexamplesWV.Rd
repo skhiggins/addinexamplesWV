@@ -4,7 +4,10 @@
 \name{addinexamplesWV}
 \alias{addinexamplesWV}
 \alias{addinexamplesWV-package}
-\title{addinexamplesWV (Win-Vector fork of \url{https://github.com/rstudio/addinexamples})}
+\title{addinexamplesWV}
 \description{
 Supplies insertDotPipeAdin.
+}
+\details{
+This package (\url{https://github.com/WinVector/addinexamplesWV}) is a fork of \url{https://github.com/rstudio/addinexamples}.
 }

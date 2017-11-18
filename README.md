@@ -5,9 +5,9 @@
 This package supplies the following [RStudio add-ins](https://rstudio.github.io/rstudioaddins/):
 
 -   **"Insert `%.>%`"** which inserts "`%.>%`" ([`wrapr`](https://winvector.github.io/wrapr/)'s ["dot pipe"](https://winvector.github.io/wrapr/articles/dot_pipe.html)")
--   **"Insert `(.)`"** which inserts "`(.)`" ("argument stand-in").
+-   **"Insert `(.)`"** which inserts "`(.)`" ("argument stand-in")
 -   **"Insert `->.;`"** which inserts "`->.;`" (["Bizarro pipe"](http://www.win-vector.com/blog/2016/12/magrittrs-doppelganger/))
--   **"Insert `%>%`"** which inserts "`%>%`" (["Magrittr pipe"](https://CRAN.R-project.org/package=magrittr))
+-   **"Insert `%>%`"** which inserts "`%>%`" (["Magrittr pipe"](https://CRAN.R-project.org/package=magrittr)).
 
 The above are useful when bound to keyboard shortcuts in [RStudio](https://www.rstudio.com/products/RStudio/).
 

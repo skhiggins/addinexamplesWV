@@ -2,7 +2,7 @@
 % Please edit documentation in R/insertDotPipeAddin.R
 \name{insertDotPipeAddin}
 \alias{insertDotPipeAddin}
-\title{Insert \%.>\%.}
+\title{Insert \%.>\% .}
 \usage{
 insertDotPipeAddin()
 }

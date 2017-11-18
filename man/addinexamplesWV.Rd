@@ -4,9 +4,7 @@
 \name{addinexamplesWV}
 \alias{addinexamplesWV}
 \alias{addinexamplesWV-package}
-\title{RStudio Addins (Win-Vector fork of \url{https://github.com/rstudio/addinexamples})}
+\title{addinexamplesWV (Win-Vector fork of \url{https://github.com/rstudio/addinexamples})}
 \description{
-Use RStudio addins to execute \R functions interactively within RStudio.
-See \code{\link{findAndReplaceAddin}()} and \code{\link{insertInAddin}()}
-for two examples of R functions that are exported.
+Supplies insertDotPipeAdin.
 }

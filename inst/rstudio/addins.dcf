@@ -1,4 +1,4 @@
 Name: Insert %.>%
-Description: Inserts `%.>%` at the cursor position.
+Description: Inserts `%.>%` (wrapr dot pipe) at the cursor position.
 Binding: insertDotPipeAddin
 Interactive: false

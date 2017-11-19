@@ -4,5 +4,5 @@
 #'
 #' @export
 insertBizzaroPipeAddin <- function() {
-  rstudioapi::insertText(" ->.;\n\t")
+  rstudioapi::insertText(" ->.; ")
 }

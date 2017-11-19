@@ -4,5 +4,5 @@
 #'
 #' @export
 insertDotArrowPipeAddin <- function() {
-  rstudioapi::insertText(" %.>%\n\t")
+  rstudioapi::insertText(" %.>% ")
 }

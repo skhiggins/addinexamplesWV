@@ -4,5 +4,5 @@
 #'
 #' @export
 insertToDotPipeAddin <- function() {
-  rstudioapi::insertText(" %>.%\n\t")
+  rstudioapi::insertText(" %>.% ")
 }

@@ -1,6 +1,6 @@
 Package: addinexamplesWV
 Title: Wrapr Dot Pipe Add-in
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(person("Kevin", "Ushey", email = "kevin@rstudio.com", role = c("aut")),
              person("John", "Mount", email = "jmount@win-vector.com", role = c("aut", "cre")))
 Description: Provides an example set of RStudio addins -- R functions that can be

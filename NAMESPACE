@@ -3,6 +3,7 @@
 export(insertArgAddin)
 export(insertBizzaroPipeAddin)
 export(insertDotArrowPipeAddin)
+export(insertMagrittrCompoundPipeAddin)
 export(insertMagrittrPipeAddin)
 export(insertToDotPipeAddin)
 import(formatR)

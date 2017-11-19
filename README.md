@@ -83,7 +83,7 @@ Bizarro pipe can be used the same way as we just used dot pipe (but does not req
 
     ## [1] 0.893855
 
-Be aware that the value of a Bizarro pipeline comes off the right bottom end of the pipeline (not the top left end as with dot pipe). So to pick up the Bizarro pipeline value you need to use a right assignment of the form `->` at the end of the pipeline. This is, however, one of the features that makes [Bizarro pipe superior for step debugging](http://www.win-vector.com/blog/2017/01/using-the-bizarro-pipe-to-debug-magrittr-pipelines-in-r/).
+Be aware that the value of a Bizarro pipeline comes off the right bottom end of the pipeline (not the top left end as with dot pipe). So to pick up the Bizarro pipeline value you need to use a right assignment of the form `->` at the end of the pipeline (or use `{}`). This is, however, one of the features that makes [Bizarro pipe superior for step debugging](http://www.win-vector.com/blog/2017/01/using-the-bizarro-pipe-to-debug-magrittr-pipelines-in-r/).
 
 Both of these pipes also work with more complicated function signatures, and with [`dplyr`](https://CRAN.R-project.org/package=dplyr):
 

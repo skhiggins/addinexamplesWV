@@ -23,3 +23,8 @@ Name: Insert %>%
 Description: Inserts %>% (Magrittr pipe) at the cursor position.
 Binding: insertMagrittrPipeAddin
 Interactive: false
+
+Name: Insert %<>%
+Description: Inserts %<>% (Magrittr compound pipe) at the cursor position.
+Binding: insertMagrittrCompoundPipeAddin
+Interactive: false

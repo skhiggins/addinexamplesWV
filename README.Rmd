@@ -116,7 +116,7 @@ starwars %.>%
 Another two good choices for binding are:
 
   * `Alt-Space` for "Insert `(.)`"
-  * `Alt-Enter` for "Insert `%.>%`".
+  * `Alt-Enter` for "Insert `%.>%`" (or even `Alt-;`).
 
 That way you are treating the argument list as a space-like separator and the pipe
 symbol as a line-end-like separator.

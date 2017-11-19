@@ -68,7 +68,7 @@ Dot pipe insists on explicit marking of function arguments with "`.`". If you al
 Basically:
 
 -   You type a function name and then press `F10`. This gives you the template for function arguments which you either leave alone (if the function only takes one argument) or edit to add in the additional arguments you need. This replaces pressing space after you type in a function name.
--   You press `F9` when you are done with a pipeline step (it replaces "enter" or "return", which you use only on the last step of a pipeline).
+-   You press `F9` when you are done with a pipeline step and then enter or return.
 
 Try the above in the RStudio editor and the RStudio console, it works really well both places.
 
@@ -111,6 +111,6 @@ starwars %.>%
 Another two good choices for binding are:
 
 -   `Alt-Space` for "Insert `(.)`"
--   `Alt-Enter` for "Insert `%.>%`".
+-   `Alt-Enter` for "Insert `%.>%`" (or even `Alt-;`).
 
 That way you are treating the argument list as a space-like separator and the pipe symbol as a line-end-like separator.

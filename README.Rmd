@@ -122,4 +122,18 @@ Another two good choices for binding are:
 That way you are treating the argument list as a space-like separator and the pipe
 symbol as a line-end-like separator.
 
+User mappings
+-------------
+
+Three user controllable add-ins are registered as part of this package: `insert usr1`,
+`insert usr2`, and `insert usr3`.  The user at run-time can change what function is
+called when the add-in is activated.  For example to re-bind the first user add-in
+to insert `:=` run the following `R` code:
+
+```{r eval=FALSE}
+options("addinexamplesWV.usrFn1" = function() { rstudioapi::insertText(" := ") })
+```
+
+This allows changing settings without rebuilding the package.
+
 

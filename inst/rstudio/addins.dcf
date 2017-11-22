@@ -28,3 +28,19 @@ Name: Insert %<>%
 Description: Inserts %<>% (Magrittr compound pipe) at the cursor position.
 Binding: insertMagrittrCompoundPipeAddin
 Interactive: false
+
+Name: Insert usr1
+Description: Inserts user chosen text at the cursor position.
+Binding: insertUsr1Addin
+Interactive: false
+
+Name: Insert usr2
+Description: Inserts user chosen text at the cursor position.
+Binding: insertUsr2Addin
+Interactive: false
+
+Name: Insert usr3
+Description: Inserts user chosen text at the cursor position.
+Binding: insertUsr3Addin
+Interactive: false
+

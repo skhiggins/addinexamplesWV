@@ -8,7 +8,7 @@ This package supplies the following [RStudio add-ins](https://rstudio.github.io/
 -   **"Insert `(.)`"** which inserts "`(.)`" ("argument stand-in")
 -   **"Insert `->.;`"** which inserts "`->.;`" (["Bizarro pipe"](http://www.win-vector.com/blog/2016/12/magrittrs-doppelganger/))
 -   **"Insert `%>.%`"** which inserts "`%>.%`" ([`wrapr`](https://winvector.github.io/wrapr/)'s ["to dot pipe"](https://winvector.github.io/wrapr/reference/grapes-greater-than-.-grapes.html)")
--   **"Insert `%>%`"** which inserts "`%>%`" (["Magrittr pipe"](https://CRAN.R-project.org/package=magrittr))
+-   **"Insert `%>%`"** which inserts "`%>%`" (["Magrittr pipe"](https://CRAN.R-project.org/package=magrittr), also usually available as a separate RStudio editor binding as `Shift-ALT-m`)
 -   **"Insert `%<>%`"** which inserts "`%<>%`" (["Magrittr compound pipe"](https://CRAN.R-project.org/package=magrittr)).
 
 The above are useful when bound to keyboard shortcuts in [RStudio](https://www.rstudio.com/products/RStudio/).

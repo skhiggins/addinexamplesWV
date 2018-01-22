@@ -2,6 +2,7 @@
 
 export(insertArgAddin)
 export(insertBizzaroPipeAddin)
+export(insertColonEqual)
 export(insertDotArrowPipeAddin)
 export(insertMagrittrCompoundPipeAddin)
 export(insertMagrittrPipeAddin)

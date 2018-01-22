@@ -29,6 +29,11 @@ Description: Inserts %<>% (Magrittr compound pipe) at the cursor position.
 Binding: insertMagrittrCompoundPipeAddin
 Interactive: false
 
+Name: Insert :=
+Description: Inserts := at the cursor position.
+Binding: insertColonEqual
+Interactive: false
+
 Name: Insert usr1
 Description: Inserts user chosen text at the cursor position.
 Binding: insertUsr1Addin

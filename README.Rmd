@@ -15,7 +15,7 @@ This package supplies the following [RStudio add-ins](https://rstudio.github.io/
   * **"Insert `%.>%`"** inserts "`%.>%`" ([`wrapr`](https://winvector.github.io/wrapr/)'s  ["dot arrow pipe"](https://winvector.github.io/wrapr/articles/dot_pipe.html)")
   * **"Insert `(.)`"** inserts "`(.)`" ("argument stand-in")
   * **"Insert `->.;`"** inserts "`->.;`" (["Bizarro pipe"](http://www.win-vector.com/blog/2016/12/magrittrs-doppelganger/)) 
-  * **"Insert `:=`"** inserts `:=` ([`wrapr`](https://winvector.github.io/wrapr/)'s  ["named map builder"](https://winvector.github.io/wrapr/reference/named_map_builder.html))
+  * **"Insert `:=`"** inserts "`:=`" ([`wrapr`](https://winvector.github.io/wrapr/)'s  ["named map builder"](https://winvector.github.io/wrapr/reference/named_map_builder.html))
   * **"Insert `%>.%`"** inserts "`%>.%`" ([`wrapr`](https://winvector.github.io/wrapr/)'s  ["to dot pipe"](https://winvector.github.io/wrapr/reference/grapes-greater-than-.-grapes.html)")
   * **"Insert `%>%`"** inserts "`%>%`" (["Magrittr pipe"](https://CRAN.R-project.org/package=magrittr), also usually available as a separate RStudio editor binding as `Shift-ALT-m`)
   * **"Insert `%<>%`"** inserts "`%<>%`" (["Magrittr compound pipe"](https://CRAN.R-project.org/package=magrittr))

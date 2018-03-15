@@ -34,6 +34,11 @@ Description: Inserts := at the cursor position.
 Binding: insertColonEqual
 Interactive: false
 
+Name: Insert %<-%
+Description: Inserts %<-% (zeallot assign) at the cursor position.
+Binding: insertZeallotArrow
+Interactive: false
+
 Name: Insert usr1
 Description: Inserts user chosen text at the cursor position.
 Binding: insertUsr1Addin

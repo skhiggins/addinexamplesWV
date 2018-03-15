@@ -11,7 +11,7 @@ This package supplies the following [RStudio add-ins](https://rstudio.github.io/
 -   **"Insert `%>.%`"** inserts "`%>.%`" ([`wrapr`](https://winvector.github.io/wrapr/)'s ["to dot pipe"](https://winvector.github.io/wrapr/reference/grapes-greater-than-.-grapes.html)")
 -   **"Insert `%>%`"** inserts "`%>%`" (["Magrittr pipe"](https://CRAN.R-project.org/package=magrittr), also usually available as a separate RStudio editor binding as `Shift-ALT-m`)
 -   **"Insert `%<>%`"** inserts "`%<>%`" (["Magrittr compound pipe"](https://CRAN.R-project.org/package=magrittr))
--   **"Insert `%<-%`"** inserts "`%<-%`" (["Zealot assign"](https://CRAN.R-project.org/package=zeallot))
+-   **"Insert `%<-%`"** inserts "`%<-%`" (["Zeallot assign"](https://CRAN.R-project.org/package=zeallot))
 
 The above are useful when bound to keyboard shortcuts in [RStudio](https://www.rstudio.com/products/RStudio/).
 

@@ -4,5 +4,5 @@
 #'
 #' @export
 insertMagrittrPipeAddin <- function() {
-  rstudioapi::insertText(" %>% ")
+  rstudioapi::insertText("%>% ")
 }
